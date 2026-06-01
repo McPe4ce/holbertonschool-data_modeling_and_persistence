@@ -4,7 +4,7 @@ CREATE TABLE books (
     author TEXT NOT NULL,
     genre TEXT NOT NULL,
     price REAL NOT NULL,
-    stock INTEGER,
+    stock INTEGER NOT NULL,
     published_year INTEGER NOT NULL
 );
 

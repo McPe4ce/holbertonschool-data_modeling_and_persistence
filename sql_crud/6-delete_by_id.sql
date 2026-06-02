@@ -1,2 +1,2 @@
 DELETE FROM books
-WHERE id = '6'
+WHERE id = '6';

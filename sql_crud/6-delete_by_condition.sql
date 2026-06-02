@@ -1,2 +1,2 @@
-DELETE FROM books;
-WHERE stock = '0'
+DELETE FROM books
+WHERE stock = '0';

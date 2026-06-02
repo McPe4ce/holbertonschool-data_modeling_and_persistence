@@ -1,1 +1,1 @@
-SELECT ROUND(AVG(price), 2) FROM books GROUP BY genre
+SELECT genre, ROUND(AVG(price), 2) FROM books GROUP BY genre

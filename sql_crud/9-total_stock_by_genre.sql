@@ -1,1 +1,1 @@
-SELECT COUNT(stock) FROM books GROUP BY genre;
+SELECT genre, COUNT(stock) FROM books GROUP BY genre;

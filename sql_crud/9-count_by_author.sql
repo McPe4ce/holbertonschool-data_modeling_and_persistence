@@ -1,1 +1,1 @@
-SELECT COUNT(author) FROM books GROUP BY author;
+SELECT author, COUNT(author) FROM books GROUP BY author;

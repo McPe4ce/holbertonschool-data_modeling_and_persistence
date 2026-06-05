@@ -1,15 +1,15 @@
 SELECT courses.title
 FROM courses
-INNER JOIN registrations ON registrations.course_id = courses.id
+INNER JOIN assignments ON assignments.course_id = courses.id
 GROUP BY courses.title
-HAVING COUNT(registrations.student_id) > (
-        --AVG courses taken by all students
-    SELECT AVG(students_registrations)
+HAVING COUNT(assignments.id) > (
+        --AVG number of assignments across all courses
+    SELECT AVG(course_assignments)
     FROM (
-        --Counts how many courses are taken by each students
-        SELECT COUNT(registrations.student_id) as students_registrations
-        FROM registrations
-        GROUP BY registrations.course_id
+        --Counts how many assignments each course has
+        SELECT COUNT(id) as course_assignments
+        FROM assignments
+        GROUP BY course_id
     )
 )
 ORDER BY courses.title ASC

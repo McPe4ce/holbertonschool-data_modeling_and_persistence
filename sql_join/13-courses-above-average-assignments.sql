@@ -1,4 +1,4 @@
-SELECT courses.title, COUNT(registrations.student_id)
+SELECT courses.title
 FROM courses
 INNER JOIN registrations ON registrations.course_id = courses.id
 GROUP BY courses.title
@@ -12,4 +12,4 @@ HAVING COUNT(registrations.student_id) > (
         GROUP BY registrations.course_id
     )
 )
-ORDER BY COUNT(registrations.student_id) DESC
+ORDER BY courses.title ASC
